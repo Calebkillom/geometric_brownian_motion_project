@@ -8,8 +8,18 @@ query_string = (
 
 URL = base_url + query_string
 
-req = requests.get(URL)
+page = requests.get(URL)
 
-soup = BeautifulSoup(req.content, "html.parser")
+if page.status_code == 200:
+    print("Page content successfully fetched.")
+else:
+    print("Failed to fetch page content. Status code:", page.status_code)
+    exit()
 
-print(soup.title)
+soup = BeautifulSoup(page.content, "html.parser")
+
+""" Find all table bodies with class "table__body" """
+table_bodies = soup.find_all("tbody", class_="table__body")
+
+for table_body in table_bodies:
+    print(table_body)
