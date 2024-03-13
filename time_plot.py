@@ -23,10 +23,13 @@ historical_data["Date"] = pd.to_datetime(
 historical_data.set_index("Date", inplace=True)
 
 """ Plot the "Price" column """
-historical_data["Price"].plot(figsize=(10, 6), color="blue")
+historical_data["Price"].plot(
+    figsize=(10, 6), color="blue",linewidth=0.5)
 
 """ Set the title and labels """
-plt.title('Time Plot of Price')
+plt.title(
+    'Daily adjusted closing stock price-XOM' 
+    ' observed over 09/03/2018 to 08/03/2024')
 plt.xlabel('Date')
 plt.ylabel('Price')
 
