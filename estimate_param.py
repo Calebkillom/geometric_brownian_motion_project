@@ -3,10 +3,12 @@
  Calculates log returns.
  Computes the mean and standard deviation of the log returns,
  Using both pandas and NumPy methods.
- Finally, it prints the results for analysis
+ Finally, it Saves the results in a word Document
 """
 import pandas as pd
 import numpy as np
+from docx import Document
+import os
 
 
 file_path = "XOM_historical_data_2018-03-09_2024-03-10.csv"
@@ -55,3 +57,21 @@ print("The std dev of log returns is:", sigma)
 
 sigma1 = historical_data["Log Returns"].std()
 print("The std dev of log returns is:", sigma1)
+
+""" Saving the Results in a Word Document """
+""" Creating a new Document Object """
+doc = Document()
+
+""" Adding a Heading """
+doc.add_heading("Geometric Brownian Motion Q3a) solution", level=1)
+
+""" Adding the mu and Sigma values to the Document """
+doc.add_paragraph(f"Mean of log returns: {mu1}")
+doc.add_paragraph(f"Standard deviation of log returns: {sigma}")
+
+""" Save the Document """
+doc.save("gbm.docx")
+
+""" Check if Document exists """
+if os.path.exists("gbm.docx"):
+    print("Document Saved Successfully")
