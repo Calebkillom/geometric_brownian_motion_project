@@ -36,3 +36,17 @@ plt.ylabel('Price')
 """ Show the plot """
 plt.grid(True)
 plt.show()
+""" save the timeplot in a pdf """
+plt.savefig('time_plot.pdf')
+
+""" Calculate the autocorrelation function (ACF)"""
+acf = historical_data['Price'].autocorr()
+
+""" Plot the ACF """
+plt.acorr(historical_data['Price'], maxlags=20)
+plt.title('Autocorrelation Function (ACF)')
+plt.xlabel('Lag')
+plt.ylabel('Autocorrelation')
+plt.grid(True)
+plt.show()
+plt.savefig('acf_plot.pdf')
