@@ -35,6 +35,7 @@ plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 sns.boxplot(y=historical_data["Log Returns"])
 plt.title("Box Plot of Log Returns")
+plt.savefig("boxplot_log_returns.pdf")
 
 plt.subplot(1, 2, 2)
 sns.histplot(historical_data["Log Returns"], kde=True)
@@ -42,6 +43,7 @@ plt.title("Histogram of Log Returns")
 plt.xlabel("Log Returns")
 plt.ylabel("Frequency")
 plt.tight_layout()
+plt.savefig("histogram_log_returns.pdf")
 plt.show()
 
 """ (c) Basic Statistics of Residuals """
@@ -67,6 +69,7 @@ plt.title("Comparison of Empirical and Fitted Normal Density")
 plt.xlabel("Residuals")
 plt.ylabel("Density")
 plt.legend()
+plt.savefig("normal_distribution_fit.pdf")
 plt.show()
 
 """ (e) Shapiro-Wilk Test for Normality """
