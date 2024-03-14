@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-
 file_path = "XOM_historical_data_2018-03-09_2024-03-10.csv"
 historical_data = pd.read_csv(file_path)
 
@@ -31,3 +30,7 @@ results = model.fit()
 
 """ Print the regression results """
 print(results.summary())
+
+""" Save regression results to a text file """
+with open("regression_results.txt", "w") as f:
+    f.write(str(results.summary()))

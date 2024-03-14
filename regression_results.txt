@@ -1,0 +1,27 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              Ln_Prices   R-squared:                       0.399
+Model:                            OLS   Adj. R-squared:                  0.398
+Method:                 Least Squares   F-statistic:                     1000.
+Date:                Thu, 14 Mar 2024   Prob (F-statistic):          7.95e-169
+Time:                        09:30:06   Log-Likelihood:                -259.77
+No. Observations:                1510   AIC:                             523.5
+Df Residuals:                    1508   BIC:                             534.2
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          3.7431      0.015    252.760      0.000       3.714       3.772
+t              0.0005    1.7e-05     31.627      0.000       0.001       0.001
+==============================================================================
+Omnibus:                      160.654   Durbin-Watson:                   0.005
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              212.697
+Skew:                          -0.914   Prob(JB):                     6.51e-47
+Kurtosis:                       2.795   Cond. No.                     1.75e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.75e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
