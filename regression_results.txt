@@ -4,7 +4,7 @@ Dep. Variable:              Ln_Prices   R-squared:                       0.399
 Model:                            OLS   Adj. R-squared:                  0.398
 Method:                 Least Squares   F-statistic:                     1000.
 Date:                Thu, 14 Mar 2024   Prob (F-statistic):          7.95e-169
-Time:                        10:07:02   Log-Likelihood:                -259.77
+Time:                        11:19:33   Log-Likelihood:                -259.77
 No. Observations:                1510   AIC:                             523.5
 Df Residuals:                    1508   BIC:                             534.2
 Df Model:                           1                                         

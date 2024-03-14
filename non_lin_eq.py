@@ -33,6 +33,14 @@ results = model.fit()
 """ Print the regression results """
 print(results.summary())
 
+""" Calculate the mean squared error (MSE) """
+mse = results.mse_resid
+
+""" Use MSE as an estimate of sigma^2 """
+sigma_squared = mse
+print("Estimate of sigma^2:", sigma_squared)
+
+
 """ Save regression results to a text file """
 with open("regression_results.txt", "w") as f:
     f.write(str(results.summary()))
